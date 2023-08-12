@@ -1,50 +1,94 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />     
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-<title>球球 - 你的好朋友 .  </title>
-<style>
-    body{
-        overflow: hidden;
-        margin: 0;
-    }    
-</style>
+	<title>球球 Studio - 人人可以做虚拟主播</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body>
-    
-<script>
+	
+	
+	<div class="bg-g1 size1 flex-w flex-col-c-sb p-l-15 p-r-15 p-t-55 p-b-35 respon1">
+		<span></span>
+		<div class="flex-col-c p-t-50 p-b-50">
+			<h3 class="l1-txt1 txt-center p-b-10">
+				开发中...
+			</h3>
 
-    console.log(' ////////////////////////////////////////////////////////////////// ');
-    console.log(' //////| _____ |////| _____ |////////////////////////////////////// ');    
-    console.log(' //////| |///| |////| |///| |////////////////////////////////////// '); 
-    console.log(' //////| |///| |////|  ___  |////////////////////////////////////// ');
-    console.log(' //////| |///| |////| |///| |////////////////////////////////////// ');    
-    console.log(' //////|_______|////| |///| |////////////////////////////////////// '); 
-    console.log(' //////////////////////////////////////////////////// DA Studio /// ');
-    console.log(' /////////////////////////////////////////// davidjang@live.com /// ');    
-    console.log(' ////////////////////////////////////////////////////////////////// '); 
-</script>
-    
-<canvas id="q"></canvas>
-<script>
-var s = window.screen;
-var width = q.width = s.width;
-var height = q.height = s.height;
-var letters = Array(256).join(1).split('');
-var draw = function () {
-  q.getContext('2d').fillStyle='rgba(0,0,0,.05)';
-  q.getContext('2d').fillRect(0,0,width,height);
-  q.getContext('2d').fillStyle='#0F0';
-  letters.map(function(y_pos, index){
-    text = String.fromCharCode(34+Math.random()*33);
-    x_pos = index * 10;
-    q.getContext('2d').fillText(text, x_pos, y_pos);
-    letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 10;
-    q.getContext('2d').fillStyle='#'+letters[index];
-  });
-};
-setInterval(draw, 33);
-</script>
+			<p class="txt-center l1-txt2 p-b-60" style="font-size: 12px;">
+				球球 Studio 是一款简单易用的虚拟人物直播软件，它可以仅通过一颗摄像头就捕获您的动作。
+				<br/>相较同类软件，球球 有更丝滑的动作算法和更流畅的性能，支持Live2D与MMD等模型。
+			</p>
+
+
+			<button class="flex-c-m s1-txt2 size3 how-btn"  onclick="jmp()">
+				访问开发者主页
+			</button>
+		</div>
+
+		<span class="s1-txt3 txt-center">
+			@ 2023 DA STUDIO. 联系 <a href="mailto:music@dastudio.asia">music@dastudio.asia</a>
+		</span>
+		
+	</div>
+
+	<!-- Modal Login -->
+	
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/moment.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script>
+		$('.cd100').countdown100({
+			// Set Endtime here
+			// Endtime must be > current time
+			endtimeYear: 0,
+			endtimeMonth: 0,
+			endtimeDate: 35,
+			endtimeHours: 18,
+			endtimeMinutes: 0,
+			endtimeSeconds: 0,
+			timeZone: "" 
+			// ex:  timeZone: "America/New_York", can be empty
+			// go to " http://momentjs.com/timezone/ " to get timezone
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
 </body>
 </html>
